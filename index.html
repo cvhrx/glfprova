@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapportini GLF</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ff0a09" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <img src="assets/logo.png" class="logo" alt="Logo" />
+    <button id="settingsBtn" class="iconbtn">⚙️</button>
+  </header>
+
+  <main id="authView" class="card">
+    <h2>Accesso</h2>
+    <div id="authMsg" class="msg"></div>
+    <label>Email <input id="email" type="email" /></label>
+    <label>Password <input id="password" type="password" /></label>
+    <div class="row">
+      <button id="loginBtn">Entra</button>
+      <button id="signupBtn" class="secondary">Registra</button>
+    </div>
+  </main>
+
+  <main id="appView" class="hidden">
+    <section class="card">
+      <h3>Compila giornata</h3>
+      <label>Data <input type="date" id="dateInput"></label>
+      <label>Ingresso 1 <input type="time" id="in1" step="1800"></label>
+      <label>Uscita 1 <input type="time" id="out1" step="1800"></label>
+      <label>Ingresso 2 <input type="time" id="in2" step="1800"></label>
+      <label>Uscita 2 <input type="time" id="out2" step="1800"></label>
+      <label>KM iniziali <input type="number" id="kmStart"></label>
+      <label>KM finali <input type="number" id="kmEnd"></label>
+      <label><input type="checkbox" id="travel"> Trasferta</label>
+      <label><input type="checkbox" id="pernotto"> Pernotto</label>
+      <label><input type="checkbox" id="night"> Ore notturne</label>
+      <label>Note <textarea id="notes"></textarea></label>
+      <div class="row">
+        <button id="saveDay">Salva giornata</button>
+        <button id="exportPdf" class="secondary">Esporta PDF</button>
+      </div>
+    </section>
+    <section class="card">
+      <button id="installBtn" class="secondary">Installa App</button>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

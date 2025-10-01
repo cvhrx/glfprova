@@ -1,0 +1,13 @@
+:root{--brand-red:#ff0a09}
+body{margin:0;font-family:sans-serif;background:#f5f7fb}
+.topbar{background:var(--brand-red);height:120px;display:flex;align-items:center;justify-content:center;position:relative}
+.topbar .logo{height:100px;width:auto;margin:0 auto}
+.iconbtn{position:absolute;right:15px;top:15px;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:22px;padding:6px 10px;border-radius:8px;cursor:pointer}
+.card{background:#fff;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:1rem;margin:1rem}
+.hidden{display:none}
+.row{display:flex;gap:.5rem;margin-top:.5rem}
+button{background:#11324d;color:#fff;border:none;padding:.6rem .9rem;border-radius:10px;cursor:pointer}
+button.secondary{background:#eef3ff;color:#11324d}
+.msg{margin:.5rem 0;padding:.5rem;border-radius:6px;font-size:.9rem;display:none}
+.msg.error{background:#fee;color:#900}
+.msg.success{background:#efe;color:#060}
